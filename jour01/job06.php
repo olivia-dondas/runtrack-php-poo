@@ -1,53 +1,61 @@
 <?php
 // Définition de la classe Personnage
 class Personnage {
-    // Attributs
+    // Attributs pour les coordonnées x et y
     public $x;
     public $y;
-    public $plateau;
 
-    // Constructeur
+    // Constructeur pour initialiser la position
     public function __construct($x, $y) {
-        $this->x = $x;  // Position initiale en x
-        $this->y = $y;  // Position initiale en y
-        $this->plateau = [];  // Plateau vide (tu peux remplir le plateau avec des valeurs ou des dimensions si nécessaire)
+        $this->x = $x;
+        $this->y = $y;
     }
 
-    // Méthode pour se déplacer à gauche
+    // Méthode pour déplacer le personnage vers la gauche
     public function gauche() {
-        $this->x -= 1;  // Déplace le personnage vers la gauche (diminution de l'index x)
+        $this->x -= 1;
     }
 
-    // Méthode pour se déplacer à droite
+    // Méthode pour déplacer le personnage vers la droite
     public function droite() {
-        $this->x += 1;  // Déplace le personnage vers la droite (augmentation de l'index x)
+        $this->x += 1;
     }
 
-    // Méthode pour se déplacer vers le bas
+    // Méthode pour déplacer le personnage vers le bas
     public function bas() {
-        $this->y += 1;  // Déplace le personnage vers le bas (augmentation de l'index y)
+        $this->y += 1;
     }
 
-    // Méthode pour se déplacer vers le haut
+    // Méthode pour déplacer le personnage vers le haut
     public function haut() {
-        $this->y -= 1;  // Déplace le personnage vers le haut (diminution de l'index y)
+        $this->y -= 1;
     }
 
-    // Méthode pour obtenir la position actuelle du personnage
+    // Méthode pour renvoyer les coordonnées actuelles
     public function position() {
         return "Position actuelle : (" . $this->x . ", " . $this->y . ")";
     }
 }
 
-// Instanciation du personnage
-$personnage = new Personnage(5, 5); // Position initiale : x = 5, y = 5
+// Instanciation de l'objet Personnage avec une position initiale (x, y)
+$monPersonnage = new Personnage(5, 5);
 
-// Déplacement du personnage
-$personnage->gauche(); // Déplacement à gauche
-$personnage->bas();    // Déplacement vers le bas
-$personnage->droite(); // Déplacement à droite
-$personnage->haut();   // Déplacement vers le haut
+// Affichage de la position initiale
+echo $monPersonnage->position() . "<br>";
 
-// Affichage de la position finale
-echo $personnage->position();  // Affiche la position actuelle après les déplacements
+// Déplacement du personnage vers la gauche
+$monPersonnage->gauche();
+echo $monPersonnage->position() . "<br>"; // Affiche la position après déplacement vers la gauche
+
+// Déplacement du personnage vers le haut
+$monPersonnage->haut();
+echo $monPersonnage->position() . "<br>"; // Affiche la position après déplacement vers le haut
+
+// Déplacement du personnage vers la droite
+$monPersonnage->droite();
+echo $monPersonnage->position() . "<br>"; // Affiche la position après déplacement vers la droite
+
+// Déplacement du personnage vers le bas
+$monPersonnage->bas();
+echo $monPersonnage->position() . "<br>"; // Affiche la position après déplacement vers le bas
 ?>
