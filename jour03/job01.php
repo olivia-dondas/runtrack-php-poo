@@ -48,7 +48,7 @@ class Professeur extends Personne {
     private $matiereEnseignee;
 
     // Constructeur de la classe Professeur
-    public function __construct($age = 14, $matiereEnseignee) {
+    public function __construct($matiereEnseignee, $age = 14) {
         parent::__construct($age);  // Appel au constructeur de la classe Personne
         $this->matiereEnseignee = $matiereEnseignee;
     }
@@ -74,8 +74,7 @@ $eleve1->afficherAge();  // Affiche "J'ai 18 ans"
 $eleve1->allerEnCours();  // Affiche "Je vais en cours"
 
 // Créer une instance de Professeur
-$professeur1 = new Professeur(35, "Mathématiques");
+$professeur1 = new Professeur("Mathématiques", 35);
 $professeur1->afficherAge();  // Affiche "L'âge de la personne est : 35 ans."
 $professeur1->enseigner();  // Affiche "Le cours va commencer"
-
 ?>
