@@ -70,9 +70,3 @@ Jusqu'à présent, nous avons utilisé une approche procédurale pour développe
 - Apprendre à utiliser les classes, les objets et les méthodes.
 - Organiser et structurer son code de manière modulaire.
 - Se familiariser avec GitHub pour versionner ses projets.
-
-## Références utiles
-
-- [PHP: Les classes et les objets](https://www.php.net/manual/fr/language.oop5.php)
-- [Programmer en orienté objet en PHP](https://www.openclassrooms.com/fr/courses/1665806)
-- [PHP: Héritage](https://www.php.net/manual/fr/language.oop5.inheritance.php)
